@@ -22,5 +22,5 @@ spec:
         env:
         - name: REDIS
           value: azure-vote-back
-        - name: TITLE
-          value: {{  .Values.title}}
+#        - name: TITLE
+#          value: {{  .Values.title}}
