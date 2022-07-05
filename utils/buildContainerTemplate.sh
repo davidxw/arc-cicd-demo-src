@@ -20,6 +20,10 @@ echo $TASKNAME
 echo $DOCKER_FILE
 
 set -euxo pipefail  # fail on error
+
+# strip extra characters out of ACR name in case ACR name has full path
+AZ_ACR_NAME=${AZ_ACR_NAME%%.*}
+echo $AZ_ACR_NAME
   
 # Generate an tag with a reproducible checksum of all files in . by doing a checksum of all files
 # in alphabetical order, then another checksum of their names and checksums.
